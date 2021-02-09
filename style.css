@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-background: hsl(185, 75%, 39%);
+  --primary-font: hsl(229, 23%, 23%);
+  --secondary-font: hsl(227, 10%, 46%);
+
+  --neutral-drak-gray: hsl(0, 0%, 59%);
+
+  --font-size-name-stat: 14px;
+  --font-family: 'Kumbh Sans', sans-serif;
+  --font-normal: 400;
+  --font-bold: 700;
+}
+
+body {
+  background-color: var(--primary-background);
+  font-family: var(--font-family);
+  font-size: var(--font-size-name-stat);
+  font-weight: var(--font-bold);
+  color: var(--primary-font);
+}
+
+.container {
+  background: url('/images/bg-pattern-top.svg') no-repeat right 50vw bottom 40vh,
+    url('/images/bg-pattern-bottom.svg') no-repeat left 47vw top 50vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  height: 25%;
+  max-width: 95%;
+  border: 1px solid var(--primary-background);
+  border-radius: 5px;
+}
+
+.top img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.bottom {
+  background-color: #fff;
+  margin: -15% 0;
+  border-radius: 0 0 15px 15px;
+  height: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bottom .profile-image img {
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+
+.name-card h1 {
+  font-size: 18px;
+}
+.social-stats {
+  font-weight: var(--font-bold);
+}
+
+.name-card span,
+.name-card p,
+.social-stats span {
+  color: var(--secondary-font);
+  font-weight: var(--font-normal);
+}
+
+.name-card p,
+.social-stats {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.social-stats span {
+  letter-spacing: 2.5px;
+  padding: 5px;
+  font-size: 12px;
+}
+
+hr {
+  color: var(--neutral-drak-gray);
+  width: 100%;
+}
+
+.name-card {
+  text-align: center;
+}
+
+.social-stats {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.social-stats p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 75px;
+}
+
+@media all and (max-width: 375px) {
+  .card {
+    height: 20%;
+    max-width: 85%;
+  }
+
+  .attribution {
+    margin-top: 75px;
+  }
+}
